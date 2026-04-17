@@ -18,18 +18,18 @@ import java.util.List;
 public class CategoryResourse {
 
     @Autowired
-    private CategoryService serviceCategory;
+    private CategoryService categoryService;
 
     @GetMapping
     public ResponseEntity<List<Category>> findAll(){
-        List<Category> list = serviceCategory.findAll();
+        List<Category> list = categoryService.findAll();
         return ResponseEntity.ok().body(list);
     }
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Category> findById(@PathVariable Long id){
-        return ResponseEntity.ok().body(serviceCategory.findById(id));
-        //Category obj = service.findById(id);
+        return ResponseEntity.ok().body(categoryService.findById(id));
+        //Category obj = categoryService.findById(id);
         //return ResponseEntity.ok().body(obj);
     }
 
