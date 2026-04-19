@@ -71,6 +71,17 @@ public class Order implements Serializable {
         this.payment = payment;
     }
 
+    //=================== Metodos ===================
+
+    public Double getTotal() {
+        double total = 0;
+        for (OrderItem item : items) {
+            total += item.getSubTotal();
+        }
+        return total;
+    }
+
+    //=================== HashCode ===================
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
