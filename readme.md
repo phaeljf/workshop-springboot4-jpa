@@ -25,7 +25,7 @@ Trata-se de um sistema de back-end que simula o domínio de um e-commerce, aplic
 - **Maven**
 
 ## Modelo de Domínio
-![Diagrama UML](./assets/diagrama-classe-uml.png)
+![Diagrama UML](./assets/uml.png)
 
 ## Pré-requisitos
 
